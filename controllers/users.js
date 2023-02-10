@@ -94,7 +94,7 @@ exports.insertData = (async (request, response) => {
             <div style="background-color: #ffffff; padding: 20px 0px 5px 0px; width: 100%; text-align: center;">
                 <h1>Titulo de la notificación</h1>
                 <p>Verifica tu Usuario haciendo click el link de abajo.</p>
-                <a href="http://localhost:3003/verify/index.html">Verificar</a>
+                <a href="https://leinad-app-0v4f.onrender.com/verify/index.html">Verificar</a>
                 <!-- Gracias -->
                 <p>Gracias por tu tiempo.</p>
                 <p style="margin-bottom: 50px;"><i>Atentamente:</i><br>Daniel Contreras</p>
