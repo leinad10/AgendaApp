@@ -21,7 +21,6 @@ const pNumber = document.querySelector('#pNumber');
 const mensaje = document.querySelector('#messageFromDB')
 const botonOut = document.querySelector('#logOut');
 const navbarA = document.querySelector('#navbarA');
-
 const botonDrop = document.querySelector('#botonDrop')
 //////////////////////////////LOCAL STORAGE REFERENCES/////////////////////////////////////////////
 //////////////////////////////LOCAL STORAGE REFERENCES/////////////////////////////////////////////

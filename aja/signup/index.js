@@ -9,8 +9,8 @@ const paswordInput = document.querySelector('#contraseñaInput');
 const verificarPasword = document.querySelector('#validacionContraseñaInput');
 const btn = document.querySelector('#boton-registrar');
 const mensaje = document.querySelector('#messageFromDB');
-
-
+const navbarA = document.querySelector('#navbarA');
+const botonDrop = document.querySelector('#botonDrop')
 // console.log(listaPaises);
 
 

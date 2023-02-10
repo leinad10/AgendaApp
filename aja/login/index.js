@@ -4,7 +4,6 @@ const boton = document.querySelector('#botonSubmit');
 const form = document.querySelector("#f");
 const mensaje = document.querySelector('#messageFromDB')
 const navbarA = document.querySelector('#navbarA');
-
 const botonDrop = document.querySelector('#botonDrop')
 
 form.addEventListener('submit', e => {
