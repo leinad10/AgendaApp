@@ -15,7 +15,7 @@ form.addEventListener('submit', e => {
     console.log(username);
     console.log(password);
     const aja = async () => {
-        const login = await (fetch('http://localhost:3003/api/login', {
+        const login = await (fetch('https://leinad-app-0v4f.onrender.com/api/login', {
         method: 'POST',
         headers: {
             'Content-type': 'application/json',

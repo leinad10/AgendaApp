@@ -139,6 +139,7 @@ input{
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: 1.5rem;
 }
+
 /* #messageFromDB {
     position: fixed;
     background-color: red;
@@ -153,6 +154,21 @@ input{
     border: 10px;
     
   } */
+  @media (min-width: 320px) {
+    .mobile {
+        padding-left: 3rem;
+    }
+}
+@media (min-width: 375px) {
+    .mobile {
+        padding-left: 6rem;
+    }
+}
+@media (min-width: 425px) {
+    .mobile {
+        padding-left: 9rem;
+    }
+}
 
 @media (max-width: 639px) {
     form {
@@ -236,6 +252,9 @@ input{
     }
 }
 @media (min-width: 768px) {
+    .md\:h-1\/4 {
+        height: 30%;
+    }
     form {
         width: 75%;
         justify-content: center;

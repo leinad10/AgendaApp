@@ -90,7 +90,7 @@ return contactos;
 //  // Funcion para revizar la autorizacion del usuario y dejarlo o no continuar en la pagina // // 
 const auth = async (esta) => {
   console.log("probando");
-  const auth = await (fetch('http://localhost:3003/api/auth', {
+  const auth = await (fetch('https://leinad-app-0v4f.onrender.com/api/auth', {
       method: 'POST',
       headers: {
         'Content-type': 'application/json',
@@ -214,7 +214,7 @@ form.addEventListener('submit',async (event) => {
     if (e.auth.status === 400) {
         noAutorizado(e.authValidation);
     } else {
-        (fetch('http://localhost:3003/api/agenda', {
+        (fetch('https://leinad-app-0v4f.onrender.com/api/agenda', {
           method: 'POST',
           headers: {
             'Content-type': 'application/json',
@@ -257,7 +257,7 @@ lista.addEventListener('click', async (event) => {
         const data = {
           id: id
         } 
-        fetch('http://localhost:3003/api/agenda', {
+        fetch('https://leinad-app-0v4f.onrender.com/api/agenda', {
           method: 'DELETE',
           headers: {
             'Content-type': 'application/json',
@@ -306,7 +306,7 @@ lista.addEventListener('click', async (event) => {
       if (e.auth.status === 400) {
           noAutorizado(e.authValidation);
       } else {
-        (fetch('http://localhost:3003/api/agenda', {
+        (fetch('https://leinad-app-0v4f.onrender.com/api/agenda', {
           method: 'PUT',
           headers: {
             'Content-type': 'application/json',
@@ -322,6 +322,6 @@ lista.addEventListener('click', async (event) => {
 botonOut.addEventListener('click', (e) => {
   e.preventDefault();
   localStorage.setItem('Usuario', '');
-  window.location.href = 'http://localhost:3003/loginn/';
+  window.location.href = '../login/index.html';
 });
 

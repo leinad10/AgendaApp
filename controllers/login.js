@@ -30,7 +30,7 @@ exports.insertData = (async (request, response) => {
           const accessToken =  generateAccessToken(usuarioValido);
           console.log('aver');
           function generateAccessToken(usuarioValido) {
-            return jwt.sign(usuarioValido, process.env.SECRET, {expiresIn: '10s'});
+            return jwt.sign(usuarioValido, process.env.SECRET, {expiresIn: '10m'});
           }
           console.log('aver2');
           response.cookie(`acces-token-${username}`, accessToken, { httpOnly: true })

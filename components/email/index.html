@@ -4,14 +4,59 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <script src="https://cdn.tailwindcss.com"></script>
     <title>Document</title>
 </head>
-<body>
-    <b>Verifica tu email escribiendo 'VERIFICAR' y haciendo click en el siguiente boton</b>
-    <form id="formulario">
-        <input type="text" id="Verificar" placeholder="Escribe tu nombre de usuario">
-        <button type= "submit" id="VerificarButton">Verificar</button>
-    </form>
+<body style="height: 75vh; width: 100%" class="bg-gray-100">
+    <nav class="flex lg:gap-64 items-center justify-between flex bg-teal-500 p-2">
+        <div class="pr-32 lg:pr-24 md:pr-24 flex items-center flex-shrink-0 text-white mr-6">
+          <span class="lg:text-2xl md:text-3xl font-semibold text-xl tracking-tight">Leinad</span>
+        </div>
+        <div class="mobile flex lg:hidden pl-10">
+          <button id="botonDrop" class="flex sm:hidden md:pr-64 items-center px-3 py-2 border rounded text-teal-200 border-teal-400 hover:text-white hover:border-white">
+            <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/></svg>
+          </button>
+          <div id="navbarA" style="margin-top: 2.4rem; margin-left: -3rem;" class="z-10 hidden md:hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-24 dark:bg-gray-700 dark:divide-gray-600">
+            <ul class="py-2 text-sm text-gray-700 dark:text-gray-400" aria-labelledby="dropdownLargeButton">
+              <li>
+                <a href="/../agenda/" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Home</a>
+              </li>
+              <li>
+                <a href="../loginn" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Log in</a>
+              </li>
+              <li>
+                <a href="../signup" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Registro</a>
+              </li>
+            </ul>
+            <div class="py-1">
+              
+            </div>
+        </div>
+        </div>
+        <div class=" lg:pl-64 w-auto lg:block items-end lg:items-left lg:w-auto">
+          <div class="text-sm hidden sm:flex lg:flex">
+            <a href="/" class=" lg:p-1 md:text-2xl text-center lg:text-lg block p-2 lg:inline-block lg:mt-0 text-teal-200 hover:text-white">
+              Home
+            </a>
+            <a href="/../agenda/" class=" lg:p-1 md:text-2xl text-center lg:text-lg p-2 text-right block lg:inline-block lg:mt-0 text-teal-200 hover:text-white">
+              Agenda
+            </a>
+            <a href="../loginn" class=" lg:p-1 md:text-2xl text-center lg:text-lg block p-2 lg:inline-block lg:mt-0 text-teal-200 hover:text-white">
+              Registro
+            </a>
+            
+          </div>
+        </div>
+      </nav>
+    <div class="h-1/12 md:h-1/4 w-10/12 md:w-10/12 lg:gap-5 p-4 justify-between border-2 border-blue-300 bg-white shadow-md md:block lg:flex rounded mx-auto mt-32 lg:px-6 lg:py-4 md:mr-16 md:ml-16 lg:w-4/5 lg:mr-32 lg:ml-32 lg:h-auto">
+        <b class="text-center md:text-xl lg:pb-0  pb-4">Verifica tu email escribiendo tu nombre de usuario y haciendo click en el siguiente boton.</b>
+        <form id="formulario" class="text-center">
+            <input type="text" id="Verificar" placeholder="Username" class="text-center mt-4 mb-4">
+            <button type= "submit" id="VerificarButton" class="p-2 bg-teal-500 md:text-xl md:p-2 rounded border-2 md:ml-24 lg:ml-0 lg:text-base lg:p-1">Verificar</button>
+        </form>
+    </div>
+    
     <script src="index.js"></script>
 </body>
 </html>

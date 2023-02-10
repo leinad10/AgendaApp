@@ -6,7 +6,7 @@ form.addEventListener('submit', e => {
     e.preventDefault();
     data = {username : input.value}
     console.log("qlqlqlqqllq");
-    fetch('http://localhost:3003/api/verify', {
+    fetch('https://leinad-app-0v4f.onrender.com/api/verify', {
           method: 'PUT',
           headers: {
             'Content-type': 'application/json',
@@ -14,6 +14,11 @@ form.addEventListener('submit', e => {
           body: JSON.stringify(data)
         });
     console.log(data);
-})
+});
 
+botonDrop.addEventListener('click', (e) => {
+  e.preventDefault();
+  navbarA.classList.toggle('fixed');
+  navbarA.classList.toggle('hidden');
+})
 

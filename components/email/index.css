@@ -1,0 +1,10 @@
+.pl-10 {
+    padding-left: 2.5rem;
+}
+
+
+@media (min-width: 375px) {
+    .pl-10{
+        padding-left: 6.5rem;
+    }
+}
