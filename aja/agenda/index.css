@@ -90,7 +90,7 @@ input{
 #contacts-list{
     width: 100%;
     gap: 5rem;
-    height: 90%;
+    height: 130%;
 }
 .show {
     display:  flex !important;

@@ -267,7 +267,9 @@ lista.addEventListener('click', async (event) => {
         
         boton.parentElement.remove();
         if (lista.children.length === 0) {
-          contenedorDeNmeros.classList.remove('show');
+          contenedorDeNmeros.classList.remove('block');
+          contenedorDeNmeros.classList.add('hidden');
+
         } 
       }
     }))
