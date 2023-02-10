@@ -12,49 +12,49 @@
     </head>
 
     <body style="height: 75vh; width: 100%" class="bg-gray-100">
-        <nav class="flex lg:gap-64 items-center justify-between flex bg-teal-500 p-2">
-            <div class="pr-32 lg:pr-24 md:pr-24 flex items-center flex-shrink-0 text-white mr-6">
-              <span class="lg:lg:text-5xl md:text-3xl font-semibold text-xl tracking-tight">Leinad</span>
+      <nav class="flex lg:gap-64 items-center justify-between flex bg-teal-500 p-2">
+        <div class="pr-32 lg:pr-24 md:pr-24 flex items-center flex-shrink-0 text-white mr-6">
+          <span class="lg:text-2xl md:text-3xl font-semibold text-xl tracking-tight">Leinad</span>
+        </div>
+        <div class="mobile flex lg:hidden pl-10">
+          <button id="botonDrop" class="flex sm:hidden md:pr-64 items-center px-3 py-2 border rounded text-teal-200 border-teal-400 hover:text-white hover:border-white">
+            <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/></svg>
+          </button>
+          <div id="navbarA" style="margin-top: 2.4rem; margin-left: -3rem;" class="z-10 hidden md:hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-24 dark:bg-gray-700 dark:divide-gray-600">
+            <ul class="py-2 text-sm text-gray-700 dark:text-gray-400" aria-labelledby="dropdownLargeButton">
+              <li>
+                <a href="/../agenda/" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Home</a>
+              </li>
+              <li>
+                <a href="../loginn" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Log in</a>
+              </li>
+              <li>
+                <a href="../signup" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Registro</a>
+              </li>
+            </ul>
+            <div class="py-1">
+              
             </div>
-            <div class="flex pl-12 lg:hidden">
-              <button id="botonDrop" class="flex sm:hidden md:pr-64 items-center px-3 py-2 border rounded text-teal-200 border-teal-400 hover:text-white hover:border-white">
-                <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/></svg>
-              </button>
-              <div id="navbarA" style="margin-top: 2.4rem; margin-left: -1rem;" class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
-                <ul class="py-2 text-sm text-gray-700 dark:text-gray-400" aria-labelledby="dropdownLargeButton">
-                  <li>
-                    <a href="/../agenda/" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Home</a>
-                  </li>
-                  <li>
-                    <a href="../loginn" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Log in</a>
-                  </li>
-                  <li>
-                    <a href="../signup" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Registro</a>
-                  </li>
-                </ul>
-                <div class="py-1">
-                  <button id="logOut" class="bg-transparent hover:bg-blue-500 text-center font-semibold text-teal-200 hover:text-white py-2 px-4 hover:border-transparent rounded">
-                    LogOut
-                  </button>
-                </div>
-            </div>
-            <div class="md:pl-56 lg:pl-0 w-full block flex-grow lg:block items-end lg:items-left lg:w-auto">
-              <div class="text-sm hidden sm:flex lg:flex">
-                <a href="/" class=" lg:p-1 md:text-2xl text-center lg:text-5xl block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">
-                  Home
-                </a>
-                <a href="/../agenda/" class=" lg:p-1 md:text-2xl text-center lg:text-5xl text-right block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">
-                  Agenda
-                </a>
-                <a href="../loginn" class=" lg:p-1 md:text-2xl text-center lg:text-5xl block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white">
-                  Log In
-                </a>
-              </div>
-            </div>
-          </nav>
+        </div>
+        </div>
+        <div class=" lg:pl-64 w-auto lg:block items-end lg:items-left lg:w-auto">
+          <div class="text-sm hidden sm:flex lg:flex">
+            <a href="/" class=" lg:p-1 md:text-2xl text-center lg:text-lg block p-2 lg:inline-block lg:mt-0 text-teal-200 hover:text-white">
+              Home
+            </a>
+            <a href="/../agenda/" class=" lg:p-1 md:text-2xl text-center lg:text-lg p-2 text-right block lg:inline-block lg:mt-0 text-teal-200 hover:text-white">
+              Agenda
+            </a>
+            <a href="../loginn" class=" lg:p-1 md:text-2xl text-center lg:text-lg block p-2 lg:inline-block lg:mt-0 text-teal-200 hover:text-white">
+              Registro
+            </a>
+            
+          </div>
+        </div>
+      </nav>
           <div id="messageFromDB" class="lg:text-3xl hidden bg-orange-100 border-l-4 border-orange-500 text-orange-700 p-4">
         </div>
-        <form id="formulario" autocomplete="off" class="custom h-2/3 md:h-2/5 sm:w-10/12 md:w-10/12 mt-24 lg:mt-32 mx-6 lg:gap-1 justify-between border-4 border-blue-300 bg-white shadow-md md:block lg:flex rounded md:mr-16 md:ml-16">
+        <form id="formulario" autocomplete="off" class="custom h-2/3 md:h-2/5 w-10/12 md:w-10/12 mt-24 lg:mt-32 mx-6 lg:gap-1 justify-between border-4 border-blue-300 bg-white shadow-md md:block lg:flex rounded md:mr-16 md:ml-16">
             <!-- Username -->
             <div class="input-container">
                 <input type="text" class="inputs shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline lg:text-4xl" id="usuarioInput" placeholder="Nombre de Usuario">

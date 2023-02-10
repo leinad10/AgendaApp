@@ -77,7 +77,7 @@ const noAutorizado = (ajam) => {
 //  //  //  //  Funcion para cargar los contactos del usuario desde la Base de Datos  //  //  // //
 const getContactsFromDB = async () => {
   console.log("probando");
-  const losContacts = await (fetch('http://localhost:3003/api/agenda', {
+  const losContacts = await (fetch('https://leinad-app-0v4f.onrender.com/api/agenda', {
       method: 'GET',
       headers: {
         'Content-type': 'application/json',

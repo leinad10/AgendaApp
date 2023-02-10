@@ -101,7 +101,7 @@ formulario.addEventListener('submit', e => {
   const aja = async () => {
     console.log(registroUser);
     console.log(JSON.stringify(registroUser));
-    // try {
+    try {
       const registro = await (fetch('https://leinad-app-0v4f.onrender.com/api/users', {
       method: 'POST',
       headers: {
@@ -148,11 +148,10 @@ formulario.addEventListener('submit', e => {
 
       }
       
-  // }
-    // catch {
-  
-    //   console.log('error');
-    // } 
+  }
+    catch {
+      console.log('error');
+    } 
   }; 
   
   
