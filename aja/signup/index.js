@@ -159,3 +159,9 @@ formulario.addEventListener('submit', e => {
   aja ();
   console.log(aja);
 });
+
+botonDrop.addEventListener('click', (e) => {
+  e.preventDefault();
+  navbarA.classList.toggle('fixed');
+  navbarA.classList.toggle('hidden');
+})

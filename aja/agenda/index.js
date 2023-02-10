@@ -19,7 +19,10 @@ const eseDiv = document.querySelector('#esta')
 const pName = document.querySelector('#pName');
 const pNumber = document.querySelector('#pNumber');
 const mensaje = document.querySelector('#messageFromDB')
-const botonOut = document.querySelector('#logOut')
+const botonOut = document.querySelector('#logOut');
+const navbarA = document.querySelector('#navbarA');
+
+const botonDrop = document.querySelector('#botonDrop')
 //////////////////////////////LOCAL STORAGE REFERENCES/////////////////////////////////////////////
 //////////////////////////////LOCAL STORAGE REFERENCES/////////////////////////////////////////////
 //////////////////////////////LOCAL STORAGE REFERENCES/////////////////////////////////////////////
@@ -41,6 +44,13 @@ let validNumber = false;
 /////////////////////////////////////////Funciones/////////////////////////////////////////////////
 /////////////////////////////////////////Funciones/////////////////////////////////////////////////
 // // //  //  //  // Funcion para sacar al usuario de la interfaz  // // // // // // // // // // // 
+botonDrop.addEventListener('click', (e) => {
+  e.preventDefault();
+  navbarA.classList.toggle('fixed');
+  navbarA.classList.toggle('hidden');
+})
+
+
 const noAutorizado = (ajam) => {
   const nuevoMensaje = document.createElement('h1')
   console.log(ajam);
@@ -315,3 +325,4 @@ botonOut.addEventListener('click', (e) => {
   localStorage.setItem('Usuario', '');
   window.location.href = 'http://localhost:3003/loginn/';
 });
+

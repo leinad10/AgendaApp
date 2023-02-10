@@ -2,6 +2,9 @@ const navMobil = document.querySelector('.nav-mobil');
 const boton = document.querySelector('#imagen');
 const nav = document.querySelector('#nav-bar');
 const body = document.querySelector('body');
+const navbarA = document.querySelector('#navbarA');
+
+const botonDrop = document.querySelector('#botonDrop')
 
 boton.addEventListener('click', (e) => {
   e.preventDefault();
@@ -12,6 +15,8 @@ boton.addEventListener('click', (e) => {
     navMobil.classList.remove('nav-mobil-display');
   }
 });
+
+
 
 
 

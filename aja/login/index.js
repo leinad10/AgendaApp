@@ -3,6 +3,9 @@ const passwordInput = document.querySelector('#password');
 const boton = document.querySelector('#botonSubmit');
 const form = document.querySelector("#f");
 const mensaje = document.querySelector('#messageFromDB')
+const navbarA = document.querySelector('#navbarA');
+
+const botonDrop = document.querySelector('#botonDrop')
 
 form.addEventListener('submit', e => {
     e.preventDefault();
@@ -57,3 +60,9 @@ form.addEventListener('submit', e => {
     aja();
     console.log(aja);
 });
+
+botonDrop.addEventListener('click', (e) => {
+    e.preventDefault();
+    navbarA.classList.toggle('fixed');
+    navbarA.classList.toggle('hidden');
+  })
