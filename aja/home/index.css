@@ -1,0 +1,280 @@
+/* :root {
+  --main-bg-color: #622d3f;
+  --main-br-color: #8d3e5f;
+  --secondary-bg-color: #c9586c;
+  --secondary-br-color: #ff8b84;
+  --other-color: #613356;
+  --other-other-color: #ffd199;
+  --text-color: #9770fe;
+} */
+
+/* body {
+  margin: 0;
+  height: calc(100vh - 4rem);
+  padding-top: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--main-bg-color);
+  height: 100vh;
+  width: 100%;
+} */
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  border-width: 0;
+  border-style: solid;
+  border-color: white;
+  color: gray;
+}
+.hidden {
+  display: none;
+}
+
+#nav-bar {
+  position: fixed;
+  background-color: var(--secondary-bg-color);
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 4rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+.nav-mobil {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  width: 70%;
+  height: calc(100vh - 4rem);
+  background-color: var(--other-color);
+  right: -30rem;
+  align-items: center;
+  gap: 2rem;
+  padding-top: 3rem;
+  transition: all 0.2s ease-in-out;
+}
+.nav-mobil-display {
+  right: 0rem;
+}
+
+.nav-link-mobil {
+  font-size: 2rem;
+  font-style: normal;
+  text-decoration: none;
+  background-color: var(--secondary-bg-color);
+  width: 70%;
+  text-align: center;
+  color: blanchedalmond;
+  border-radius: 00.5rem;
+}
+
+#title {
+  margin: 0;
+  color: var(--text-color);
+  width: 100%;
+  font-size: 1.75rem;
+  text-align: center;
+}
+
+.nav-link {
+  color: wheat;
+  text-decoration: none;
+  padding: 0.85rem;
+  border-radius: 0.5rem;
+  transition: all 0.5s ease-in-out;
+}
+
+#h1-nav-bar {
+  color: wheat;
+}
+
+#links-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+  display: none;
+}
+
+#imagen {
+  font-size: 2.5rem;
+}
+
+.nav-link:hover {
+  background-color: var(--other-color);
+  color: wheat;
+}
+
+/* #container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  background-color: var(--secondary-bg-color);
+  border-radius: 2rem;
+  border-color: var(--main-br-color);
+  border-width: 0.5rem;
+  width: 85%;
+  height: max-content;
+} */
+#container{
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  padding: 3em;
+}
+/* #description {
+  color: wheat;
+} */
+
+
+
+#main-link:hover {
+  background-color: var(--secondary-bg-color);
+  color: wheat;
+  transition: all 0.5s ease-in-out;
+  border-radius: 0.5rem;
+}
+
+@media (min-width: 640px) {
+  /* #container {
+    width: 80%;
+    font-size: 2rem;
+  } */
+
+  #title {
+    font-size: 4rem;
+  }
+
+  #nav-bar {
+    font-size: 1.75rem;
+  }
+
+  #imagen {
+    font-size: 3.5rem;
+  }
+
+  /* #description {
+    font-size: 3rem;
+  } */
+}
+
+@media (min-width: 768px) {
+  .nav-mobil {
+    display: none;
+  }
+  /* #container {
+    border-width: 1.2rem;
+  } */
+
+  #links-container {
+    display: block;
+    font-size: 1rem;
+  }
+
+  #imagen {
+    display: none;
+  }
+
+  #nav-bar {
+    height: 3rem;
+  }
+
+  #tittle {
+    font-size: 2rem;
+  }
+
+  /* #description {
+    font-size: 1rem;
+  } */
+}
+
+@media (min-width: 1024px) {
+  .nav-mobil {
+    display: none;
+  }
+  #links-container {
+    font-size: 1rem;
+  }
+
+  /* #container {
+    width: 80%;
+    font-size: 1rem;
+  } */
+
+  #title {
+    font-size: 3rem;
+  }
+
+  #nav-bar {
+    font-size: 2rem;
+    height: 3rem;
+  }
+
+  /* #description {
+    font-size: 2rem;
+  } */
+}
+
+@media (min-width: 1440px) {
+  .nav-mobil {
+    display: none;
+  }
+  #links-container {
+    font-size: 2rem;
+  }
+
+  /* #container {
+    width: 80%;
+    font-size: 3rem;
+  } */
+
+  #title {
+    font-size: 3rem;
+  }
+
+  #nav-bar {
+    font-size: 2rem;
+    height: 7rem;
+  }
+
+  /* #description {
+    font-size: 3rem;
+  } */
+}
+
+@media (min-width: 2560px) {
+  .nav-mobil {
+    display: none;
+  }
+  #links-container {
+    font-size: 3rem;
+  }
+
+  /* #container {
+    width: 80%;
+    font-size: 3rem;
+  } */
+
+  #title {
+    font-size: 5rem;
+  }
+
+  #nav-bar {
+    font-size: 3rem;
+    height: 12rem;
+  }
+
+  /* #description {
+    font-size: 6rem;
+  } */
+}

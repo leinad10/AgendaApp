@@ -1,0 +1,512 @@
+:root {
+  --main-bg-color: #622d3f;
+  --main-br-color: #8d3e5f;
+  --secondary-bg-color: #c9586c;
+  --secondary-br-color: #ff8b84;
+  --other-color: #613356;
+  --other-other-color: #ffd199;
+  --text-color: #9770fe;
+}
+* {
+  box-sizing: border-box;
+  border-width: 0;
+  border-style: solid;
+  border-color: white;
+  margin: 0;
+  padding: 0;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  word-break: break-word;
+  hyphens: auto;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: var(--main-bg-color);
+  height: 100vh;
+  padding: 4rem;
+  margin: 0;
+}
+#back {
+  display: flex;
+  position: fixed;
+  top: 2rem;
+  right: 2rem;
+  font-size: 3rem;
+  text-decoration: none;
+}
+#home {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  padding: 0.5rem;
+  background-color: var(--secondary-bg-color);
+  border-radius: 2rem;
+  width: 80%;
+  height: fit-content;
+  border-width: 1.5rem;
+  border-color: var(--other-color);
+  max-height: 90%;
+}
+
+#contenedor-del-titulo {
+  border-style: dashed;
+  border-top: 0ch;
+  border-left: 0ch;
+  border-right: 0ch;
+  border-color: var(--other-color);
+  margin: 0;
+  font-size: 1.5rem;
+  width: 100%;
+  height: 25%;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  padding-bottom: 2rem;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+}
+
+#titulo-delcontenedor {
+  text-align: center;
+  font-size: 3rem;
+  color: var(--text-color);
+}
+
+#section-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  height: 70%;
+  padding: 0.5rem;
+  width: 100%;
+  color: var(--text-color);
+}
+
+#input-text {
+  text-align: center;
+  font-size: 2rem;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  width: 100%;
+  background-color: var(--secondary-br-color);
+}
+
+#boton-formulario {
+  font-size: 1.5rem;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  width: 100%;
+  background-color: var(--other-other-color);
+  color: gray;
+}
+
+#conentedor-de-tareas {
+  display: flex;
+  flex-direction: column;
+  gap: 2%;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--text-color);
+}
+
+ol {
+  height: 65%;
+  width: 100%;
+  font-size: 1.5rem;
+  padding: 0rem;
+  gap: 0.5rem;
+  overflow: auto;
+  margin-top: 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+.claseLista {
+  list-style: none;
+  background-color: var(--other-other-color);
+  border-color: var(--main-br-color);
+  border-width: 0.1rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  color: gray;
+  flex-direction: row;
+  height: fit-content;
+}
+#input-2 {
+  text-align: left;
+  width: 76%;
+  max-width: 76%;
+  font-size: 1rem;
+  display: flex;
+}
+
+.delete-btn {
+  background-color: var(--secondary-br-color);
+  font-size: 2rem;
+  width: 12%;
+}
+.guardar-btn {
+  background-color: var(--secondary-br-color);
+  font-size: 1.2rem;
+  width: 12%;
+}
+
+.edit-btn {
+  background-color: var(--secondary-br-color);
+  font-size: 2rem;
+  width: 12%;
+}
+#contenedor-de-lista {
+  display: none;
+  overflow: auto;
+}
+.hidden {
+  display: none !important;
+}
+.show {
+  display: flex !important;
+}
+.borde {
+  border-width: 1rem;
+}
+p {
+  font-size: 1rem;
+  text-align: left;
+  width: 76%;
+  height: fit-content;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 639px) {
+  #back {
+    font-size: 2rem;
+    top: 0.5rem;
+    right: 0.5rem;
+  }
+  body {
+    padding: 1rem;
+  }
+
+  #home {
+    border-width: 0.5rem;
+    gap: 0rem;
+  }
+
+  #section-form {
+    gap: 0.5rem;
+  }
+
+  #contenedor-de-tareas {
+    margin-top: 1.5rem;
+  }
+
+  #contenedor-del-titulo {
+    gap: 0.5rem;
+    padding: 0;
+    height: 45%;
+  }
+  .borde {
+    border-width: 0.5rem;
+  }
+
+  #contenedor-de-lista {
+    height: 75%;
+  }
+
+  .list-item {
+    margin-bottom: 00.5rem;
+  }
+
+  #titulo-delcontenedor {
+    font-size: 1rem;
+  }
+
+  #input-text {
+    font-size: 1rem;
+  }
+
+  #boton-formulario {
+    font-size: 1rem;
+  }
+
+  ol {
+    font-size: 1rem;
+    padding: 0;
+  }
+
+  .delete-btn {
+    font-size: 1rem;
+    width: 12%;
+  }
+
+  .edit-btn {
+    font-size: 1rem;
+    width: 12%;
+  }
+}
+
+@media (min-width: 640px) {
+  body {
+    padding: 1rem;
+  }
+
+  #home {
+    border-width: 0.5rem;
+    gap: 0rem;
+  }
+
+  #section-form {
+    gap: 0.5rem;
+  }
+
+  #contenedor-de-tareas {
+    padding: 2rem;
+    margin-top: 1.5rem;
+  }
+
+  #contenedor-del-titulo {
+    gap: 0.5rem;
+    padding: 0;
+    height: 45%;
+  }
+  .borde {
+    border-width: 0.5rem;
+  }
+
+  #contenedor-de-lista {
+    height: 65%;
+  }
+
+  .list-item {
+    margin-bottom: 00.5rem;
+  }
+
+  #titulo-delcontenedor {
+    font-size: 2rem;
+  }
+
+  #input-text {
+    font-size: 1rem;
+  }
+
+  #boton-formulario {
+    font-size: 1rem;
+  }
+
+  ol {
+    font-size: 1.25rem;
+  }
+
+  .delete-btn {
+    font-size: 1rem;
+    width: 12%;
+  }
+
+  .check-btn {
+    font-size: 1rem;
+    width: 12%;
+  }
+
+  .delete-btn {
+    font-size: 1rem;
+  }
+
+  .edit-btn {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 768px) {
+  #contenedor-de-lista {
+    height: 65%;
+  }
+
+  #titulo-delcontenedor {
+    font-size: 1.5rem;
+  }
+
+  #input-text {
+    font-size: 1.5rem;
+  }
+
+  #boton-formulario {
+    font-size: 1.5rem;
+  }
+
+  ol {
+    font-size: 1rem;
+  }
+
+  .delete-btn {
+    font-size: 1rem;
+  }
+
+  .edit-btn {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  #home {
+    border-width: 1rem;
+  }
+  .borde {
+    border-width: 1rem;
+  }
+
+  #contenedor-de-lista {
+    height: 80%;
+  }
+
+  #section-form {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  #titulo-delcontenedor {
+    font-size: 3rem;
+  }
+
+  #input-text {
+    font-size: 1rem;
+  }
+
+  #boton-formulario {
+    font-size: 1rem;
+  }
+
+  ol {
+    font-size: 1rem;
+  }
+
+  .delete-btn {
+    font-size: 1rem;
+  }
+
+  .edit-btn {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 1440px) {
+  #back {
+    font-size: 5rem;
+    top: 4rem;
+    right: 4rem;
+  }
+  #home {
+    border-width: 1rem;
+  }
+
+  .borde {
+    border-width: 0.8rem;
+  }
+
+  #contenedor-de-lista {
+    height: 70%;
+  }
+
+  #section-form {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  #titulo-delcontenedor {
+    font-size: 5rem;
+  }
+
+  #input-text {
+    font-size: 3rem;
+  }
+
+  #boton-formulario {
+    font-size: 3rem;
+  }
+
+  ol {
+    font-size: 3.5rem;
+  }
+  p {
+    font-size: 2rem;
+  }
+  #input-2 {
+    font-size: 2rem;
+  }
+  .guardar-btn {
+    font-size: 3.5rem;
+  }
+  .delete-btn {
+    font-size: 3.5rem;
+  }
+
+  .edit-btn {
+    font-size: 3.5rem;
+  }
+}
+
+@media (min-width: 2560px) {
+  #home {
+    border-width: 2rem;
+  }
+
+  #contenedor-de-lista {
+    height: 70%;
+    padding: 6rem;
+  }
+
+  #section-form {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6rem;
+  }
+
+  #titulo-delcontenedor {
+    font-size: 8rem;
+  }
+
+  #input-text {
+    font-size: 4rem;
+  }
+
+  #boton-formulario {
+    font-size: 4rem;
+  }
+  .guardar-btn {
+    font-size: 6rem;
+  }
+  p {
+    font-size: 3rem;
+  }
+
+  ol {
+    font-size: 6rem;
+  }
+
+  .delete-btn {
+    font-size: 6rem;
+  }
+
+  .check-btn {
+    font-size: 6rem;
+  }
+  #back {
+    font-size: 8rem;
+  }
+}

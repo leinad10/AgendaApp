@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+</head>
+<body style="height: 75vh; width: 100%" class="bg-gray-100">
+    <nav class="flex lg:gap-64 items-center justify-between flex bg-teal-500 p-6">
+        <div class="lg:pr-24 flex items-center flex-shrink-0 text-white mr-6">
+          <span class="lg:text-2xl font-semibold text-xl tracking-tight">Leinad</span>
+        </div>
+        <div style="padding-left:60%" class="flex  lg:hidden">
+          <button class="flex sm:hidden items-center px-3 py-2 border rounded text-teal-200 border-teal-400 hover:text-white hover:border-white">
+            <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/></svg>
+          </button>
+        </div>
+        <div  class=" lg:pl-64 w-full block flex-grow lg:block items-end lg:items-left lg:w-auto">
+          <div class="text-sm hidden sm:flex lg:flex">
+            <a href="/" class=" lg:p-1 lg:text-lg block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">
+              Home
+            </a>
+            <a href="/../agenda/" class=" lg:p-1 lg:text-lg text-right block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">
+              Agenda
+            </a>
+            <a href="../signup" class=" lg:p-1 lg:text-lg block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white">
+              Registro
+            </a>
+          </div>
+        </div>
+      </nav>
+      <div id="messageFromDB" class="hidden bg-orange-100 border-l-4 border-orange-500 text-orange-700 p-4">
+    </div>
+    
+    <!-- <nav class= "bg-white border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-900"id="nav-bar">
+        <h1 class="text-gray-100 text-6xl" id="h1-nav-bar">Leinad</h1>
+        <div class= "container flex flex-wrap items-center justify-between mx-auto" id="links-container">
+            <a class="flex items-center" href="/">Home</a>
+            <a class="flex items-center" href="/../agenda/"">Agenda</a>
+            <a class="flex items-center" href="../signup">Registro</a>
+        </div>
+    </nav> -->
+    <div style="height:100%; align-items: center; justify-content:center" class="flex lg:flex w-full h-full">
+        <form id="f" autocomplete="off" style="align-items: center" class="border-4 border-blue-300 bg-white shadow-md md:block rounded px-8 pt-6 pb-8 md:mr-16 md:w-full md:ml-16 lg:mr-16 lg:ml-8">
+          <div class="mb-4">
+            <label class="block text-gray-700 text-sm font-bold mb-2" for="username">
+              Username
+            </label>
+            <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="username" type="text" placeholder="Username">
+          </div>
+          <div class="mb-6">
+            <label class="block text-gray-700 text-sm font-bold mb-2" for="password">
+              Password
+            </label>
+            <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" id="password" type="password" placeholder="******************">
+          </div>
+          <div class="flex items-center justify-center">
+            <button style="justify-content:center" class="flex bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">
+              Log in
+            </button>
+          </div>
+        </form>
+        <img src="http://localhost:3003/images/login.svg" class="hidden lg:flex lg:w-1/2 lg:pr-16"alt="Login SVG"/>
+      </div>
+    <!-- <div>
+        <form id="f">
+            <input id="username" placeholder="Usuario">
+            <input id="password" placeholder="Contrase;a">
+            <button id="botonSubmit" type='submit'>Log In</button>
+        </form>
+    </div> -->
+    <script src="index.js"></script>
+</body>
+
+</html>

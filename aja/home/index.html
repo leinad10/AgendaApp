@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <link rel="stylesheet" href="index.css">
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://cdn.tailwindcss.com"></script>
+        <title>Clase-html</title>
+    </head>
+
+    <body style="height: 75vh; width: 100%" class="bg-gray-100">
+        <nav class="flex lg:gap-64 items-center justify-between flex bg-teal-500 p-2">
+            <div class="pr-32 lg:pr-24 md:pr-24 flex items-center flex-shrink-0 text-white mr-6">
+              <span class="text-teal-200 lg:lg:text-5xl md:text-4xl font-semibold text-xl tracking-tight">Leinad</span>
+            </div>
+            <div class="flex pl-12 lg:hidden">
+              <button class="text-teal-200 flex sm:hidden md:pr-64 items-center px-3 py-2 border rounded text-teal-200 border-teal-400 hover:text-white hover:border-white">
+                <svg class="text-teal-200 fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/></svg>
+              </button>
+            </div>
+            <div class="md:pl-32 lg:pl-0 w-full block flex-grow lg:block items-end lg:items-left lg:w-auto">
+              <div class="text-sm hidden sm:flex lg:flex">
+                <a href="/" class=" lg:p-1 md:text-4xl text-center lg:text-5xl block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">
+                  Home
+                </a>
+                <a href="/../agenda/" class=" lg:p-1 md:text-4xl text-center lg:text-5xl text-right block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">
+                  Agenda
+                </a>
+                <a href="../loginn" class=" lg:p-1 md:text-4xl text-center lg:text-5xl block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white">
+                  Log In
+                </a>
+              </div>
+            </div>
+          </nav>
+        <div class="nav-mobil">
+            <a class="nav-link-mobil" href="httos://www.google.com" target="_blank">Home</a>
+            <a class="nav-link-mobil" href=".\app\app.html" target="_blank">App</a>
+            <a class="nav-link-mobil" href=".\agenda\Agenda.html" target="_blank">Agenda</a>
+            <a class="nav-link-mobil" href="httos://www.google.com" target="_blank">About</a>
+        </div>
+        <div id="container" class="custom h-1/2 md:h-2/5 sm:w-10/12 md:w-10/12 mt-24 lg:mt-32 mx-6 lg:gap-1 justify-between border-4 border-blue-300 bg-white shadow-md md:block lg:flex rounded md:mr-16 md:ml-16">
+            <h1 id="title">Notass HTML</h1>
+            <div>
+                <!-- Parrafos  -->
+                <p id="description" class="text-gray-600 lg:text-5xl">Prueba nuestra nueva app de notas, para que no se te olvide nada, jamas. Facil,
+                    sencillo y lo mejor ES GRATIS!!
+                </p>
+                <a id="main-link" class="text-gray-600 lg:text-4xl lg:p-8" href="http://localhost:3003/agenda" target="_blank">App</a>
+            </div>
+        </div>
+        <script src="index.js"></script>
+    </body>
+
+</html>
