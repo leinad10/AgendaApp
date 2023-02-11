@@ -107,12 +107,19 @@ formulario.addEventListener('submit', e => {
       body: JSON.stringify(registroUser)
     }));
     const registroJSON = await registro.json();
-    // console.log(registroJSON);
-    // console.log(registro);
+    return {registro,registroJSON}
+  }
+    catch {
+      console.log('error');
+    } 
+  }; 
+  aja().then(contactos => {
+    console.log(contactos.registroJSON);
+    console.log(contactos.registro);
     if (registro.status === 400) {
       mensaje.innerHTML=''
       const enviarMensaje = document.createElement('h1');
-      enviarMensaje.innerHTML = `${registroJSON.error}`
+      enviarMensaje.innerHTML = `${contactos.registroJSON.error}`
       mensaje.append(enviarMensaje);
       mensaje.classList.add('flex');
       mensaje.classList.remove('hidden');
@@ -121,9 +128,10 @@ formulario.addEventListener('submit', e => {
         mensaje.classList.add('hidden')
       }, 5000);
     } else {
+      console.log("jajaj");
         mensaje.innerHTML = ''
         const enviarMensaje = document.createElement('h1');
-        enviarMensaje.innerHTML = `Usuario Creado satisfactoriamente, Bienvenido ${registroJSON.username}`
+        enviarMensaje.innerHTML = `Usuario Creado satisfactoriamente, Bienvenido ${contactos.registroJSON.username}`
         mensaje.append(enviarMensaje);
         mensaje.classList.add('flex');
         mensaje.classList.remove('hidden');
@@ -146,14 +154,7 @@ formulario.addEventListener('submit', e => {
           window.location.href = '../loginn/index.html'
         }, 3000);
     }
-  }
-    catch {
-      console.log('error');
-    } 
-  }; 
-  
-  
-  aja ();
+  })
   console.log(aja);
 });
 

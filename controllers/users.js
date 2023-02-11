@@ -128,8 +128,6 @@ exports.insertData = (async (request, response) => {
         console.log(info);
     }
   })
-
-  
   //   // User creation in MongoDB
   const user = new User({
     username,
@@ -139,7 +137,7 @@ exports.insertData = (async (request, response) => {
 
   // Send user
   const savedUser = await user.save();
-  return response.status(201).json(savedUser);
+  return response.status(200).json({ok: "Usuario creado satisfactoriamente"});
 });
 
   // User.create(username, email, passwordHash, (err, docs) => {
