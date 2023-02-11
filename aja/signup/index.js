@@ -116,7 +116,7 @@ formulario.addEventListener('submit', e => {
   aja().then(contactos => {
     console.log(contactos.registroJSON);
     console.log(contactos.registro);
-    if (registro.status === 400) {
+    if (contactos.registro.status === 400) {
       mensaje.innerHTML=''
       const enviarMensaje = document.createElement('h1');
       enviarMensaje.innerHTML = `${contactos.registroJSON.error}`
