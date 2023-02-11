@@ -324,6 +324,14 @@ lista.addEventListener('click', async (event) => {
 botonOut.addEventListener('click', (e) => {
   e.preventDefault();
   localStorage.setItem('Usuario', '');
-  window.location.href = '../login/index.html';
+  nuevoMensaje.innerHTML = `Su secion a sido cerrada satisfactoriamente`
+  mensaje.append(nuevoMensaje);
+  localStorage.setItem('Usuario', '');
+  mensaje.classList.add('show')
+  setInterval(() => {
+    mensaje.classList.remove('show');
+    nuevoMensaje.innerHTML = ''
+    window.location.href = '../loginn/index.html'
+  }, 3000);
 });
 

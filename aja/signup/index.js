@@ -89,15 +89,12 @@ verificarPasword.addEventListener('input', e => {
 
 formulario.addEventListener('submit', e => {
   e.preventDefault();
-
   const registroUser = {
     username : usernameInput.value,
     email : emailInput.value,
     password : paswordInput.value,
 
   }
-  
-  
   const aja = async () => {
     console.log(registroUser);
     console.log(JSON.stringify(registroUser));
@@ -110,26 +107,29 @@ formulario.addEventListener('submit', e => {
       body: JSON.stringify(registroUser)
     }));
     const registroJSON = await registro.json();
-
-    console.log(registroJSON);
-    console.log(registro);
+    // console.log(registroJSON);
+    // console.log(registro);
     if (registro.status === 400) {
       mensaje.innerHTML=''
       const enviarMensaje = document.createElement('h1');
       enviarMensaje.innerHTML = `${registroJSON.error}`
       mensaje.append(enviarMensaje);
-      mensaje.classList.add('show');
+      mensaje.classList.add('flex');
+      mensaje.classList.remove('hidden');
       setInterval(() => {
-        mensaje.classList.remove('show');
+        mensaje.classList.remove('flex');
+        mensaje.classList.add('hidden')
       }, 5000);
     } else {
         mensaje.innerHTML = ''
         const enviarMensaje = document.createElement('h1');
         enviarMensaje.innerHTML = `Usuario Creado satisfactoriamente, Bienvenido ${registroJSON.username}`
         mensaje.append(enviarMensaje);
-        mensaje.classList.add('show');
+        mensaje.classList.add('flex');
+        mensaje.classList.remove('hidden');
         setInterval(() => {
-          mensaje.classList.remove('show');
+          mensaje.classList.add('hidden');
+          mensaje.classList.remove('flex');
         }, 5000);
         usernameInput.value = ''
         emailInput.value = ''
@@ -144,10 +144,8 @@ formulario.addEventListener('submit', e => {
         validation(usernameInput, usernameValidation);
         setInterval(() => {
           window.location.href = '../loginn/index.html'
-        }, 6000);
-
-      }
-      
+        }, 3000);
+    }
   }
     catch {
       console.log('error');
