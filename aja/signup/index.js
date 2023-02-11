@@ -131,7 +131,7 @@ formulario.addEventListener('submit', e => {
       console.log("jajaj");
         mensaje.innerHTML = ''
         const enviarMensaje = document.createElement('h1');
-        enviarMensaje.innerHTML = `Usuario Creado satisfactoriamente, Bienvenido ${contactos.registroJSON.username}`
+        enviarMensaje.innerHTML = `Usuario Creado satisfactoriamente`
         mensaje.append(enviarMensaje);
         mensaje.classList.add('flex');
         mensaje.classList.remove('hidden');
