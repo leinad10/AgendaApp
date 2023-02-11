@@ -120,24 +120,23 @@ exports.insertData = (async (request, response) => {
 </body>`,
   };
 
-  transporter.sendMail(mailOptions, (err, info) => {
+  transporter.sendMail(mailOptions, async (err, info) => {
     if (err)  {
         response.status(500).json({error: "Email, not sended"})
     } else {
-        console.log("email sended");
-        console.log(info);
+      const user = new User({
+        username,
+        email,
+        passwordHash,
+      });
+    
+      // Send user
+      const savedUser = await user.save();
+      return response.status(200).json({savedUser});
     }
   })
   //   // User creation in MongoDB
-  const user = new User({
-    username,
-    email,
-    passwordHash,
-  });
-
-  // Send user
-  const savedUser = await user.save();
-  return response.status(200).json({ok: "Usuario creado satisfactoriamente"});
+  
 });
 
   // User.create(username, email, passwordHash, (err, docs) => {

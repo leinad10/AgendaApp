@@ -111,6 +111,8 @@ formulario.addEventListener('submit', e => {
   }
     catch {
       console.log('error');
+      console.log(error.message);
+      console.log(error);
     } 
   }; 
   aja().then(contactos => {
