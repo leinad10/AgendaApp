@@ -28,9 +28,12 @@ exports.getData = (async (req, res) => {
 
 exports.deletData = (req,res) => {
   const {aver} = req.body
-
+  console.log(aver);
   Agenda.deleteOne({_id: aver},
   (err,docs) => {
+    if (err) {
+      console.log(err);
+    }
     console.log(docs);
     res.send({
       items: docs
