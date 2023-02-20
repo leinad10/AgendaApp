@@ -124,20 +124,20 @@ exports.insertData = (async (request, response) => {
     if (err)  {
         response.status(500).json({error: "Email, not sended"})
     } else {
-      const user = new User({
-        username,
-        email,
-        passwordHash,
-      });
-    
-      // Send user
-      const savedUser = await user.save();
-      return response.status(200).json({savedUser});
-    }
-  })
+        
+  }})
   //   // User creation in MongoDB
-  
-});
+  const user = new User({
+    username,
+    email,
+    passwordHash,
+  });
+
+  // Send user
+  const savedUser = await user.save();
+  return response.status(200).json({savedUser});
+  }
+);
 
   // User.create(username, email, passwordHash, (err, docs) => {
   //   if (err) {
