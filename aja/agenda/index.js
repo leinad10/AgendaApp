@@ -254,7 +254,8 @@ lista.addEventListener('click', async (event) => {
       } else {
         const id = boton.id
         console.log(id);
-        const data = `ObjectId("${id}")`
+        const data = `ObjectId("${id}")`;
+        console.log(data);
         fetch('https://leinad-app-0v4f.onrender.com/api/agenda', {
           method: 'DELETE',
           headers: {
