@@ -59,7 +59,7 @@ const validation = (input, regexValidation) => {
 };
 
 usernameInput.addEventListener('input', e => {
-  const USERNAME_REGEX = /^(?=.*[a-z])[a-z0-9].{3,8}$/;
+  const USERNAME_REGEX = /^(?=.*[a-z])[a-z0-9].{3,24}$/;
   usernameValidation = USERNAME_REGEX.test(e.target.value);
   validation(usernameInput, usernameValidation);
 });
