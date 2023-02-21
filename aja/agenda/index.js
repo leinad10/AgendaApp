@@ -101,6 +101,19 @@ const auth = async (esta) => {
 const authValidation = await (auth.json());
 return {authValidation, auth};
 }
+const del = async (esta) => {
+  console.log("probando");
+  const aja = await (fetch('https://leinad-app-0v4f.onrender.com/api/agenda', {
+          method: 'DELETE',
+          headers: {
+            'Content-type': 'application/json',
+          },
+          body: JSON.stringify(esta)
+        }));
+  console.log("probandodele");
+const deilete = await (aja.json());
+return {aja, deilete};
+}
 // // Funcion para cambiar entre editar y guardar los contactos (Practicamente soloe s visual) // /
 const showRemove = (evento) => {
   evento[2].classList.toggle('show');
@@ -256,16 +269,7 @@ lista.addEventListener('click', async (event) => {
         console.log(id);
         const data = `ObjectId("${id}")`;
         console.log(data);
-        const aja = await (fetch('https://leinad-app-0v4f.onrender.com/api/agenda', {
-          method: 'DELETE',
-          headers: {
-            'Content-type': 'application/json',
-          },
-          body: JSON.stringify(data)
-        }));
-        console.log(aja);
-        const vv = await (aja.json());
-        console.log(vv);
+        del (data);
         
         boton.parentElement.remove();
         if (lista.children.length === 0) {
