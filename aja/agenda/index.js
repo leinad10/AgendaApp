@@ -330,6 +330,7 @@ lista.addEventListener('click', async (event) => {
 botonOut.addEventListener('click', (e) => {
   e.preventDefault();
   localStorage.setItem('Usuario', '');
+  const nuevoMensaje = document.createElement('h1')
   nuevoMensaje.innerHTML = `Su secion a sido cerrada satisfactoriamente`
   mensaje.append(nuevoMensaje);
   localStorage.setItem('Usuario', '');
