@@ -29,7 +29,14 @@ exports.getData = (async (req, res) => {
 exports.deletData = (async (req,res) => {
   const {aver} = req.body
   console.log(aver);
-  await Agenda.findByIdAndDelete();
+  await Agenda.findByIdAndDelete(aver), (err,docs) => {
+    if (err) {
+      console.log(err);
+    } else {
+      console.log(docs);
+      res.status(200).json({ok: docs})
+    }
+  }
 });
 exports.changeData = (req,res) => {
   const {id, contactNumber, contactname} = req.body
