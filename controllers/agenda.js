@@ -28,6 +28,7 @@ exports.getData = (async (req, res) => {
 
 exports.deletData = (req,res) => {
   const {aver} = req.body
+  console.log(req.docs);
   console.log(aver);
   Agenda.deleteOne({ id : aver },
   (err,docs) => {
