@@ -29,7 +29,7 @@ exports.getData = (async (req, res) => {
 exports.deletData = (req,res) => {
   const {aver} = req.body
   console.log(aver);
-  Agenda.find({id:aver}, (err,docs) => {
+  Agenda.findOne({_id:aver}, (err,docs) => {
     console.log(docs);
     res.send(docs);
   })
