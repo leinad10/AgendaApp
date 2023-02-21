@@ -73,7 +73,7 @@ emailInput.addEventListener('input', e => {
 
 paswordInput.addEventListener('input', e => {
   const PASWORD_REGEX =
-    /^(?=.*[a-z])(?=.*[0-9])(?=.*[!,@,#,$,%,^,&,*,(,),~]).{4,24}$/;
+    /^(?=.*[a-z])(?=.*[0-9])(?=.*[!"#$%&'()*+,-./:;<=>?@[\]^_`{|}~]).{4,24}$/;
   paswordValidation = PASWORD_REGEX.test(e.target.value);
   validation(paswordInput, paswordValidation);
   paswordMatch = e.target.value === verificarPasword.value;
