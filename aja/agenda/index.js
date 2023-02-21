@@ -20,6 +20,7 @@ const pName = document.querySelector('#pName');
 const pNumber = document.querySelector('#pNumber');
 const mensaje = document.querySelector('#messageFromDB')
 const botonOut = document.querySelector('#logOut');
+const botonOut2 = document.querySelector('#logOut2');
 const navbarA = document.querySelector('#navbarA');
 const botonDrop = document.querySelector('#botonDrop')
 //////////////////////////////LOCAL STORAGE REFERENCES/////////////////////////////////////////////
@@ -341,4 +342,20 @@ botonOut.addEventListener('click', (e) => {
     window.location.href = '../loginn/index.html'
   }, 3000);
 });
+
+botonOut2.addEventListener('click', (e) => {
+  e.preventDefault();
+  localStorage.setItem('Usuario', '');
+  const nuevoMensaje = document.createElement('h1')
+  nuevoMensaje.innerHTML = `Su secion a sido cerrada satisfactoriamente`
+  mensaje.append(nuevoMensaje);
+  localStorage.setItem('Usuario', '');
+  mensaje.classList.add('show')
+  setInterval(() => {
+    mensaje.classList.remove('show');
+    nuevoMensaje.innerHTML = ''
+    window.location.href = '../loginn/index.html'
+  }, 3000);
+});
+
 
