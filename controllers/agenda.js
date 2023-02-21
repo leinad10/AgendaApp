@@ -52,6 +52,7 @@ exports.changeData = (req,res) => {
   (err,docs) => {
     if (err) {
       console.log(err);
+      res.send(err);
     }
     console.log(docs);
     res.send({
