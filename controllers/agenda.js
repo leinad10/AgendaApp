@@ -28,18 +28,21 @@ exports.getData = (async (req, res) => {
 
 exports.deletData = (req,res) => {
   const {aver} = req.body
-  console.log(req.docs);
   console.log(aver);
-  Agenda.deleteOne({ id : aver },
-  (err,docs) => {
-    if (err) {
-      console.log(err);
-    }
+  Agenda.find({id:aver}, (err,docs) => {
     console.log(docs);
-    res.send({
-      items: docs
-    })
+    res.send(docs);
   })
+  // Agenda.deleteOne({ id : aver },
+  // (err,docs) => {
+  //   if (err) {
+  //     console.log(err);
+  //   }
+  //   console.log(docs);
+  //   res.send({
+  //     items: docs
+  //   })
+  // })
 }
 exports.changeData = (req,res) => {
   const {id, contactNumber, contactname} = req.body
