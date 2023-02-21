@@ -15,7 +15,7 @@ exports.insertData = (async (req,res) =>{
 
 exports.getData = (async (req, res) => {
     const aver = req.body
-    Agenda.find({}, (err, docs) =>  {
+    await Agenda.find({}, (err, docs) =>  {
         if (err) {
         res.status(400).json({error:"No existen"})
        } else {
@@ -26,24 +26,11 @@ exports.getData = (async (req, res) => {
       })
 })
 
-exports.deletData = (req,res) => {
+exports.deletData = (async (req,res) => {
   const {aver} = req.body
   console.log(aver);
-  Agenda.findOne({id:aver}, (err,docs) => {
-    console.log(docs);
-    res.send(docs);
-  })
-  // Agenda.deleteOne({ id : aver },
-  // (err,docs) => {
-  //   if (err) {
-  //     console.log(err);
-  //   }
-  //   console.log(docs);
-  //   res.send({
-  //     items: docs
-  //   })
-  // })
-}
+  await Agenda.findByIdAndDelete();
+});
 exports.changeData = (req,res) => {
   const {id, contactNumber, contactname} = req.body
   const body = {

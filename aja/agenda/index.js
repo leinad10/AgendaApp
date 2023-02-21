@@ -268,9 +268,7 @@ lista.addEventListener('click', async (event) => {
       } else {
         const id = boton.id
         console.log(id);
-        const data = `ObjectId("${id}")`;
-        console.log(data);
-        del (data);
+        del (id);
         
         boton.parentElement.remove();
         if (lista.children.length === 0) {
