@@ -29,16 +29,16 @@ exports.getData = (async (req, res) => {
 exports.deletData = (req,res) => {
   const {aver} = req.body
   console.log(aver);
-  Agenda.deleteOne({ id : aver },
-  (err,docs) => {
-    if (err) {
-      console.log(err);
-    }
-    console.log(docs);
-    res.send({
-      items: docs
-    })
-  })
+  Agenda.deleteOne({ id : aver });
+  // (err,docs) => {
+  //   if (err) {
+  //     console.log(err);
+  //   }
+  //   console.log(docs);
+  //   res.send({
+  //     items: docs
+  //   })
+  // })
 }
 exports.changeData = (req,res) => {
   const {id, contactNumber, contactname} = req.body
