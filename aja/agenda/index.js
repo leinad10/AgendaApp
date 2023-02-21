@@ -256,15 +256,16 @@ lista.addEventListener('click', async (event) => {
         console.log(id);
         const data = `ObjectId("${id}")`;
         console.log(data);
-        const aja = fetch('https://leinad-app-0v4f.onrender.com/api/agenda', {
+        const aja = await (fetch('https://leinad-app-0v4f.onrender.com/api/agenda', {
           method: 'DELETE',
           headers: {
             'Content-type': 'application/json',
           },
           body: JSON.stringify(data)
-        });
+        }));
         console.log(aja);
-        console.log(aja.json());
+        const vv = await (aja.json());
+        console.log(vv);
         
         boton.parentElement.remove();
         if (lista.children.length === 0) {
